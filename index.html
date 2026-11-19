@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aakash | Web Development Internship - Task 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Flexbox navigation -->
+  <header class="site-header">
+    <div class="nav-bar">
+      <span class="logo">Aakash<span class="dot">.</span></span>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#todo">To-Do List</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="hero">
+      <h1>Task 2: Intermediate HTML, CSS &amp; JavaScript</h1>
+      <p>ApexPlanet Software Pvt. Ltd. | Web Development Internship</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- CSS Grid content area -->
+    <section id="overview" class="section">
+      <h2>What's in this project</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>📝 Contact Form</h3>
+          <p>A form with text, email, dropdown and message fields, styled with CSS.</p>
+        </article>
+        <article class="card">
+          <h3>✅ Validation</h3>
+          <p>JavaScript checks required fields and the email format before submitting.</p>
+        </article>
+        <article class="card">
+          <h3>📱 Responsive Layout</h3>
+          <p>Flexbox for the navigation, CSS Grid for content, and media queries for all screen sizes.</p>
+        </article>
+        <article class="card">
+          <h3>📋 Dynamic To-Do List</h3>
+          <p>Add, complete and remove tasks dynamically using DOM manipulation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="todo" class="section">
+      <h2>Dynamic To-Do List</h2>
+      <div class="panel">
+        <form id="todoForm" class="todo-form" novalidate>
+          <label for="todoInput" class="sr-only">New task</label>
+          <input type="text" id="todoInput" placeholder="Add a new task..." maxlength="100" autocomplete="off">
+          <button type="submit" class="btn">Add Task</button>
+        </form>
+        <p id="todoError" class="error" role="alert"></p>
+
+        <ul id="todoList" class="todo-list"></ul>
+
+        <div class="todo-footer">
+          <span id="todoCount">0 tasks</span>
+          <button type="button" id="clearAll" class="btn btn-light">Clear All</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Form</h2>
+      <div class="panel">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+              <span class="error" id="nameError"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com">
+              <span class="error" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject">
+              <option value="">-- Select a subject --</option>
+              <option value="general">General Enquiry</option>
+              <option value="feedback">Feedback</option>
+              <option value="project">Project Discussion</option>
+            </select>
+            <span class="error" id="subjectError"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message * <small>(min 10 characters)</small></label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+            <span class="error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+          <p id="formSuccess" class="success" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Aakash | Built for ApexPlanet Internship Program</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
